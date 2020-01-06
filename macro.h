@@ -26,29 +26,16 @@ using namespace std;
 
 typedef long long ll;
 typedef struct constraint0{
-    ll min_size;
-    ll max_size;
-    ll min_gap;
-    ll max_gap;
-    ll min_count_gap;
-    ll max_count_gap;
-    ll min_total_length_of_gaps;
-    ll max_total_length_of_gaps;
-    ll min_total_length_of_non_gaps;
-    ll max_total_length_of_non_gaps;
     ll num_wild;    
+    ll max_size;
+    ll min_size;
 }constraint;
 typedef struct succession0{
     string s;
-    ll count_gap_wilds;
     ll num_wilds;
-    ll total_length_of_wilds;
-    ll total_length_of_non_wilds;
 }succession;
+
 typedef struct each_succession0{
-    ll count_gap;
-    ll total_length_of_gaps;
-    ll total_length_of_non_gaps;
 }each_succession;
 
 typedef long double ld;

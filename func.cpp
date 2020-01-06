@@ -35,6 +35,31 @@ void combination(ld2 &ans,unsigned long n,unsigned long r){
    ans=ans_f;
 } 
 
+char comp(char c){
+    switch (c){
+        case 'A':
+            return 'T';
+        case 'T':
+            return 'A';
+        case 'C':
+            return 'G';
+        case 'G':
+            return 'C';        
+        default:
+            return '\0';
+    }
+
+}
+
+string complement(string s){
+  string s2="";
+  for(unsigned int i=0;i<s.length();i++){
+    s2.push_back(comp(s[s.length()-i-1]));
+  }
+  return s2;
+}
+
+
 void l(ld2 &ans,ll support,ll count0,ll count1){
   ll total = count0+count1;
   ld2 ans0,ans1;
@@ -70,7 +95,7 @@ void prefixspan(succession suc,string let,database db,ll minsup, pattern &patter
   string buf;
   ll id,tag,id_old;
   each_succession each_suc;
-  int flag_count_gap,flag_support_all,flag_support_all_with_constraints;
+  int flag_support_all,flag_support_all_with_constraints;
   int flag_support_all_old;//The data with the same id has already count support.
   int flag_support_all_with_constraints_old;
   string s_origin=suc.s;
@@ -96,10 +121,8 @@ void prefixspan(succession suc,string let,database db,ll minsup, pattern &patter
         id=get<0>(db[j]);
         buf=get<1>(db[j]);
         tag=get<2>(db[j]);
-        each_suc.count_gap=get<3>(db[j]).count_gap;
 
         sum_char=0;
-        flag_count_gap=0;
         flag_support_all_with_constraints=0;
         flag_support_all=0;
         while(1){
@@ -122,29 +145,16 @@ void prefixspan(succession suc,string let,database db,ll minsup, pattern &patter
           buf.erase(buf.begin(),buf.begin()+n_char+1);
           if(debug)cout<<"buf="<<buf<<" nchar="<<n_char<<endl;
 
-          if(flag_initial==0){
-            if(flag_count_gap==0 && sum_char>0){
-              each_suc.count_gap++;
-              flag_count_gap=1;
-            }
-          }
             
-          if((!flag_initial && c.max_gap>=0 && sum_char>c.max_gap)
-          ||(flag_count_gap && c.max_count_gap>=0 && each_suc.count_gap>c.max_count_gap)){
-            break;
-          }
+          if(!flag_initial && sum_char>0)break;
 
           if((c.min_size<0||s_length+1>=c.min_size)
-          &&(c.min_count_gap<0 || each_suc.count_gap>=c.min_count_gap)
-          &&(!flag_count_gap || c.min_gap<0 || sum_char>=c.min_gap)
           &&let[i]!=wild_card){
             flag_support_all_with_constraints=1;
           }
 
-          if(!flag_count_gap || c.min_gap<0 || sum_char>=c.min_gap){//This may be something wrong.
-            projected_db.push_back(make_tuple(id,buf,tag,each_suc));
-            flag_support_all=1;
-          }
+          projected_db.push_back(make_tuple(id,buf,tag,each_suc));
+          flag_support_all=1;
           sum_char++; //count deleted character
         }
         if(id!=id_old){
