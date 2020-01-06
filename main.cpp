@@ -5,9 +5,7 @@
 #include <vector>
 #include <cstdio>
 #include <tuple>
-extern "C" {
-   #include <quadmath.h>
-}
+#include <algorithm>
 #include<time.h>
 #include <stdio.h>
 #include <gmp.h>
@@ -133,6 +131,7 @@ int main(int argc,char **argv){
       getline(mf[i],s);
       if(s[0]=='>'){
         if(s2!=""){
+          transform(s2.begin(), s2.end(), s2.begin(), ::toupper);
           db.push_back(make_tuple(count[0]+count[1],s2,i,each_suc_initial));
           if(flag_complement)
             db.push_back(make_tuple(count[0]+count[1],complement(s2),i,each_suc_initial));
@@ -144,6 +143,7 @@ int main(int argc,char **argv){
       }
     }
     if(s2!=""){
+      transform(s2.begin(), s2.end(), s2.begin(), ::toupper);
       db.push_back(make_tuple(count[0]+count[1],s2,i,each_suc_initial));
       if(flag_complement)
         db.push_back(make_tuple(count[0]+count[1],complement(s2),i,each_suc_initial));
