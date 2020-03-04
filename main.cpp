@@ -74,7 +74,7 @@ int main(int argc,char **argv){
         }                
         break;
       case 'w':
-	if(optarg>0){
+	if(atoi(optarg)>0){
 	  flag_wild=1;
           wild_card='*';
           c.num_wild = atoi(optarg);
