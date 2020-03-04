@@ -1,4 +1,4 @@
-GCC=g++ -g -Wall 
+GCC=g++ -O3 -Wall 
 TARGET=main
 TARGET2=func
 EXT=cpp

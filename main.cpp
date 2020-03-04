@@ -36,9 +36,8 @@ int main(int argc,char **argv){
   c.max_size=-1;
   c.min_size=-1;
   c.num_wild=0;
-  int cut_size=0;
 
-  while((opt=getopt(argc,argv,"a:db:o:O:p:r:w:cs:S:t:"))!=EOF){
+  while((opt=getopt(argc,argv,"a:db:o:O:p:r:w:cs:S:"))!=EOF){
     switch(opt){
       case 'a':
         alpha=atof(optarg);
@@ -90,9 +89,6 @@ int main(int argc,char **argv){
       case 'S':
         c.max_size=atoi(optarg);
         break;
-      case 't':
-        cut_size=atoi(optarg);
-        break;
       default:
         break;
     }
@@ -138,7 +134,6 @@ int main(int argc,char **argv){
       if(s[0]=='>'){
         if(s2!=""){
           transform(s2.begin(), s2.end(), s2.begin(), ::toupper);
-          s2=s2.substr(cut_size,s2.size()-2*cut_size);
           db.push_back(make_tuple(count[0]+count[1],s2,i,each_suc_initial));
           if(flag_complement)
             db.push_back(make_tuple(count[0]+count[1],complement(s2),i,each_suc_initial));
@@ -151,7 +146,6 @@ int main(int argc,char **argv){
     }
     if(s2!=""){
       transform(s2.begin(), s2.end(), s2.begin(), ::toupper);
-      s2=s2.substr(cut_size,s2.size()-2*cut_size);
       db.push_back(make_tuple(count[0]+count[1],s2,i,each_suc_initial));
       if(flag_complement)
         db.push_back(make_tuple(count[0]+count[1],complement(s2),i,each_suc_initial));
