@@ -3,7 +3,7 @@
 Build with the command "make". 
 
 #Requirement 
-GNU MP 6.2.0
+ GNU MP 6.2.0
 
 ##Usage
 
