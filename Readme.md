@@ -9,7 +9,7 @@ Build with the command "make".
 
 ./main [-w number] [FILE (negative dataset)] [FILE (positive dataset)]   
 
-Do pattern mining for negative and positive datasets in 2 FASTA format FILEs with the significant level.
+Do pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
 
 ### Option  
 -w
