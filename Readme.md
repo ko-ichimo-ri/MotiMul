@@ -13,7 +13,7 @@ Do pattern mining for negative and positive datasets in 2 FASTA format FILEs wit
   Set the number of wildcards. The wildcard "\*" is used instead of one character.  
 
 ###Example1
- $ ./main data_negative.txt data_positive.txt
+ \$ ./main data_negative.txt data_positive.txt
  letters: ACGT
  alpha: 0.05
  debug: off
