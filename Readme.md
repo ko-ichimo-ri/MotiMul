@@ -5,11 +5,10 @@ Build with the command "make".
 ## Requirement  
  GNU MP 6.2.0  (C++ Support)
  
- To install that, 
+ To install that,  
  `sudo apt-get install libgmp3-dev`  
- if you use Linux.
- Or see [this URL](https://gmplib.org/manual/Installing-GMP.html).  
- Notice that the build option "--enable-cxx" is necessary for configuration like this:  
+ if you use Linux.  
+ Or see [this URL](https://gmplib.org/manual/Installing-GMP.html). Notice that the build option "--enable-cxx" is necessary for configuration like this:  
  ./configure --enable-cxx  
 
 ## Usage
