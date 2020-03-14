@@ -3,7 +3,8 @@
 Build with the command "make". 
 
 ## Requirement  
- GNU MP 6.2.0
+ GNU MP 6.2.0  
+ To install it, show [this URL](https://gmplib.org/manual/Installing-GMP.html)
 
 ## Usage
 
