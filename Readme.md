@@ -14,7 +14,7 @@ Do pattern mining with the statistical significance for negative and positive da
 ### Option  
 -a  
   Configure the significance level. The default value is 0.05.  
--w
+-w  
   Set the number of wildcards. The default number is 0. The wildcard "\*" is used instead of one character.  
 
 ## Example1  
