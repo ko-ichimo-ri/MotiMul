@@ -12,8 +12,8 @@ Do pattern mining for negative and positive datasets in 2 FASTA format FILEs wit
 -w
   Set the number of wildcards. The wildcard "\*" is used instead of one character.  
 
-Example
-koichimori@DESKTOP-RFQ6374:~/thesis/MotiMul$ ./main data_negative.txt data_positive.txt
+###Example1
+$ ./main data_negative.txt data_positive.txt
 letters: ACGT
 alpha: 0.05
 debug: off
@@ -51,7 +51,9 @@ Statistical significant pattern:
 the number of significant patterns: 21
 
 time: 0.000000 seconds
-koichimori@DESKTOP-RFQ6374:~/thesis/MotiMul$ ./main -w 1 data_negative.txt data_positive.txt
+
+###Example2
+$ ./main -w 1 data_negative.txt data_positive.txt
 letters: ACGT
 wild card: *
 alpha: 0.05
