@@ -2,20 +2,20 @@
 
 Build with the command "make". 
 
-##Requirement  
+## Requirement  
  GNU MP 6.2.0
 
-##Usage
+## Usage
 
 ./main [-w number] [FILE (negative dataset)] [FILE (positive dataset)]   
 
 Do pattern mining for negative and positive datasets in 2 FASTA format FILEs with the significant level.
 
-###Option  
+### Option  
 -w
   Set the number of wildcards. The wildcard "\*" is used instead of one character.  
 
-##Example  
+## Example  
 $ ./main data_negative.txt data_positive.txt  
 letters: ACGT  
 alpha: 0.05  
