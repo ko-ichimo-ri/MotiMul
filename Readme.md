@@ -10,4 +10,4 @@ Do pattern mining for negative and positive datasets in 2 FASTA format FILEs wit
 
 ##Option  
 -w
-  Set the number of wild card.
+  Set the number of wildcards. The wildcard "\*" is used instead of one character.  
