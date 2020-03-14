@@ -2,7 +2,7 @@
 
 Build with the command "make". 
 
-#Requirement 
+##Requirement  
  GNU MP 6.2.0
 
 ##Usage
@@ -15,7 +15,7 @@ Do pattern mining for negative and positive datasets in 2 FASTA format FILEs wit
 -w
   Set the number of wildcards. The wildcard "\*" is used instead of one character.  
 
-####Example 
+##Example 
 l$ ./main data_negative.txt data_positive.txt 
 letters: ACGT 
 alpha: 0.05 
