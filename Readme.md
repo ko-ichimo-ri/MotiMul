@@ -14,7 +14,9 @@ Do pattern mining for negative and positive datasets in 2 FASTA format FILEs wit
 
 ###Example1
 $ ./main data_negative.txt data_positive.txt
+
 letters: ACGT
+
 alpha: 0.05
 debug: off
 minsup(one-path): 4
