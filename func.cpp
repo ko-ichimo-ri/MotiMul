@@ -238,7 +238,7 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
     cout<<buf_l;
     cout<<endl;
   }
-  if(1-debug)printf("\nStatistical significant pattern:\n");
+  if(1-debug)printf("\nStatistical significant patterns:\n");
   for(ll i=0;i<num_minsup;i++){
     get<0>(pattern[i])=p_value(get<2>(pattern[i]),get<3>(pattern[i]),count0,count1);//Alright?
   }
