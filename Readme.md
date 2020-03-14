@@ -28,7 +28,7 @@ the number of positive data: 10
 Significant Level after Multiple Correction: 0.00121951  
 the number of frequent patterns: 41  
 
-Statistical significant pattern:  
+Statistical significant patterns:  
 "ATGCA": p_value: 5.41254e-06  
 "TATGC": p_value: 5.41254e-06  
 "TATGCA": p_value: 5.41254e-06  
@@ -47,18 +47,18 @@ the number of significant patterns: 12
 time: 0.015625 seconds
 
 ## Example2  
-$ ./main -w 1 data_negative.txt data_positive.txt  
+$ ./main -a 0.01 -w 1 data_negative.txt data_positive.txt  
 wild card: \*  
-Significant Level before Multiple Correction: 0.05  
-minsup(one-path): 4  
-minsup(last): 8  
+Significant Level before Multiple Correction: 0.01  
+minsup(one-path): 6  
+minsup(last): 9  
 the total size of the datasets: 20  
 the number of negative data: 10  
 the number of positive data: 10  
-Significant Level after Multiple Correction: 0.000431034  
-the number of frequent patterns: 116  
+Significant Level after Multiple Correction: 8.92857e-05  
+the number of frequent patterns: 112  
  
-Statistical significant pattern:  
+Statistical significant patterns:  
 "A\*ACA": p_value: 5.41254e-06  
 "A\*ACAC": p_value: 5.41254e-06  
 "A\*GCA": p_value: 5.41254e-06  
@@ -118,13 +118,7 @@ Statistical significant pattern:
 "TGCA\*A": p_value: 5.9538e-05  
 "TTA": p_value: 5.9538e-05  
 "TTAT": p_value: 5.9538e-05  
-"A\*AC": p_value: 0.000357228  
-"A\*GC": p_value: 0.000357228  
-"AC\*C": p_value: 0.000357228  
-"T\*TGC": p_value: 0.000357228  
-"T\*TGCA": p_value: 0.000357228  
-"TT\*T": p_value: 0.000357228  
   
-the number of significant patterns: 65
+the number of significant patterns: 59
 
-time: 0.015625 seconds
+time: 0.031250 seconds
