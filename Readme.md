@@ -3,7 +3,7 @@
 Build with the command "make". 
 
 #Requirement
- GNU MP 6.2.0
+  GNU MP 6.2.0
 
 ##Usage
 
@@ -14,11 +14,6 @@ Do pattern mining for negative and positive datasets in 2 FASTA format FILEs wit
 ###Option  
 -w
   Set the number of wildcards. The wildcard "\*" is used instead of one character.  
-
-
-
-
-
 
 ###Example
  $ ./main data_negative.txt data_positive.txt
