@@ -93,14 +93,14 @@ int main(int argc,char **argv){
         break;
     }
   }
-  cout<<"letters: "<< let <<endl;
+ // cout<<"letters: "<< let <<endl;
   if(flag_wild)
   cout<<"wild card: "<< wild_card<<endl;
-  cout<<"alpha: "<<alpha<<endl;
+  cout<<"Significant Level before Multiple Correction: "<<alpha<<endl;
   if(debug){
     printf("debug: on\n");
   }else{
-    printf("debug: off\n");
+   // printf("debug: off\n");
   }
   if(debug){
     printf("argv[optind]: %s\n",argv[optind]);

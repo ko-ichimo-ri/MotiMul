@@ -1,20 +1,20 @@
 >foo bar
-GttcGTtatGCAAtacacGGctGccAcGAc
+GGtcTtatGCAGacacttGG
 >foo bar
-AtAcctAtATtatGCAAAacacGGctAcct
+AcTtatGCAGacacAtcAtc
 >foo bar
-GcAtcGcGGGAGtGTtatGCAAtacacGGG
+TtatGCAGacaccGGAtGGc
 >foo bar
-AtcAGcAtATtatGCAAAacacGGccAcAc
+GAtGcTtatGCAcacaccAA
 >foo bar
-tGTtatGCAAtacacGGAAGtAAGttccAA
+GAcATtatGCAAacacAcAt
 >foo bar
-AtAcGcTtatGCAAcacacGGtGccGtGGc
+AGTtatGCAAacacGAAGGG
 >foo bar
-TtatGCAAGacacGGGAcGAAcActAcGAA
+tAtTtatGCAGacacGAAAA
 >foo bar
-ctTtatGCAAtacacGGtGGAtAtGGcAct
+TtatGCAAacacGAcGAGAA
 >foo bar
-GcAGtAtGATtatGCAAcacacGGAccGGA
+GTtatGCAcacactGttGcc
 >foo bar
-ctAGGAcAtGAATtatGCAAcacacGGAGt
+TtatGCAcacacAcAttctt

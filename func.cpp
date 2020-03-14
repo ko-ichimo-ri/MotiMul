@@ -221,8 +221,8 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
     }        
   }
   if(debug)cout<<"letters+wild card: "<<let<<endl;//いらないかも
-  printf("total: %Ld\n0: %Ld\n1: %Ld\n",total,count0,count1);//いらないかも
-  cout<<"delta: ";
+  printf("the total size of the datasets: %Ld\nthe number of negative data: %Ld\nthe number of positive data: %Ld\n",total,count0,count1);//いらないかも
+  cout<<"Significant Level after Multiple Correction: ";
   cout<<delta;//ldprintf
   cout<<endl;
   cout<<"the number of frequent patterns: "<<num_minsup<<endl;
