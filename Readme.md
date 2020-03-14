@@ -27,7 +27,7 @@ letters: ACGT
  delta: 0.000819672
  the number of frequent patterns: 61
 
- Statistical significant pattern:
+ Statistical significant patterns:
  "ACACG": p_value: 5.41254e-06
  "ACACGG": p_value: 5.41254e-06
 "ATGCAA": p_value: 5.41254e-06
@@ -70,7 +70,7 @@ total: 20
 delta: 0.000248756
 the number of frequent patterns: 201
 
-Statistical significant pattern:
+Statistical significant patterns:
 "A\*ACA": p_value: 5.41254e-06
 "A\*ACAC": p_value: 5.41254e-06
 "A\*ACACG": p_value: 5.41254e-06
