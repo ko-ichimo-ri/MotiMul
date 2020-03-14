@@ -18,16 +18,14 @@ Do pattern mining with the statistical significance for negative and positive da
   Set the number of wildcards. The default number is 0. The wildcard "\*" is used instead of one character.  
 
 ## Example1  
-$ ./main data_negative.txt data_positive.txt  
-letters: ACGT  
-alpha: 0.05  
-debug: off  
+$ ./main data_negative.txt data_positive.txt   
+Significant Level before Multiple Correction: 0.05  
 minsup(one-path): 4  
 minsup(last): 8  
-total: 20  
-0: 10  
-1: 10  
-delta: 0.00121951  
+the total size of the datasets: 20  
+the number of negative data: 10  
+the number of positive data: 10  
+Significant Level after Multiple Correction: 0.00121951  
 the number of frequent patterns: 41  
 
 Statistical significant pattern:  
@@ -50,16 +48,14 @@ time: 0.015625 seconds
 
 ## Example2  
 $ ./main -w 1 data_negative.txt data_positive.txt  
-letters: ACGT  
 wild card: \*  
-alpha: 0.05  
-debug: off  
+Significant Level before Multiple Correction: 0.05  
 minsup(one-path): 4  
 minsup(last): 8  
-total: 20  
-0: 10  
-1: 10  
-delta: 0.000431034  
+the total size of the datasets: 20  
+the number of negative data: 10  
+the number of positive data: 10  
+Significant Level after Multiple Correction: 0.000431034  
 the number of frequent patterns: 116  
  
 Statistical significant pattern:  
