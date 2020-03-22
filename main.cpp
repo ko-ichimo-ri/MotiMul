@@ -65,6 +65,7 @@ int main(int argc,char **argv){
         break;
       case 'p':
         pattern_for_evaluation=optarg;
+        transform(pattern_for_evaluation.begin(), pattern_for_evaluation.end(), pattern_for_evaluation.begin(), ::toupper);
         break;
       case 'r':
         fs_pattern.open(optarg,ios::app);
