@@ -52,5 +52,6 @@ for directory, dirs, files in os.walk(mainDir):
                     y=list(data.mean())
                     print(y)
                     print(x_list[directory])
-                    ax.plot(x_list[directory],y,label=str(i)+' wildcards')
+                    ax.plot(x_list[directory],y,label=(str(i)+' wildcards'))
+                ax.legend(loc=0)
                 plt.savefig("./figure/"+attribute+"_"+directory+".png")
