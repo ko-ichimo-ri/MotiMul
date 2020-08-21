@@ -57,52 +57,52 @@ the number of significant patterns: 12
 time: 0.015625 seconds
 
 ## Example2  
-$ ./main -a 0.01 -w 1 -s 4 -S 6 data_negative.txt data_positive.txt
-wild card: \*
-Significant Level before Multiple Correction: 0.01
-minsup(one-path): 6
-minsup(last): 9
-the total size of the datasets: 20
-the number of negative data: 10
-the number of positive data: 10
-Significant Level after Multiple Correction: 0.000222222
-the number of frequent patterns: 45
-
-Statistical significant patterns:
-"A\*ACA": p_value: 5.41254e-06
-"A\*ACAC": p_value: 5.41254e-06
-"A\*GCA": p_value: 5.41254e-06
-"AT\*CA": p_value: 5.41254e-06
-"ATGCA": p_value: 5.41254e-06
-"CA\*AC": p_value: 5.41254e-06
-"CA\*ACA": p_value: 5.41254e-06
-"GCA\*AC": p_value: 5.41254e-06
-"T\*ATGC": p_value: 5.41254e-06
-"TA\*GC": p_value: 5.41254e-06
-"TA\*GCA": p_value: 5.41254e-06
-"TAT\*CA": p_value: 5.41254e-06
-"TATG\*A": p_value: 5.41254e-06
-"TATGC": p_value: 5.41254e-06
-"TATGCA": p_value: 5.41254e-06
-"TT\*TG": p_value: 5.41254e-06
-"TT\*TGC": p_value: 5.41254e-06
-"TTA\*G": p_value: 5.41254e-06
-"TTA\*GC": p_value: 5.41254e-06
-"TTAT\*C": p_value: 5.41254e-06
-"TTATG": p_value: 5.41254e-06
-"TTATGC": p_value: 5.41254e-06
-"ACAC": p_value: 5.9538e-05
-"ATG\*A": p_value: 5.9538e-05
-"ATGC": p_value: 5.9538e-05
-"CA\*A": p_value: 5.9538e-05
-"GCA\*A": p_value: 5.9538e-05
-"T\*ATG": p_value: 5.9538e-05
-"TA\*G": p_value: 5.9538e-05
-"TAT\*C": p_value: 5.9538e-05
-"TATG": p_value: 5.9538e-05
-"TGCA\*A": p_value: 5.9538e-05
-"TTAT": p_value: 5.9538e-05
-
-the number of significant patterns: 33
-
-time: 0.015625 seconds
+$ ./main -a 0.01 -w 1 -s 4 -S 6 data_negative.txt data_positive.txt  
+wild card: \*  
+Significant Level before Multiple Correction: 0.01  
+minsup(one-path): 6  
+minsup(last): 9  
+the total size of the datasets: 20  
+the number of negative data: 10  
+the number of positive data: 10  
+Significant Level after Multiple Correction: 0.000222222  
+the number of frequent patterns: 45  
+  
+Statistical significant patterns:  
+"A\*ACA": p_value: 5.41254e-06  
+"A\*ACAC": p_value: 5.41254e-06  
+"A\*GCA": p_value: 5.41254e-06  
+"AT\*CA": p_value: 5.41254e-06  
+"ATGCA": p_value: 5.41254e-06  
+"CA\*AC": p_value: 5.41254e-06  
+"CA\*ACA": p_value: 5.41254e-06  
+"GCA\*AC": p_value: 5.41254e-06  
+"T\*ATGC": p_value: 5.41254e-06  
+"TA\*GC": p_value: 5.41254e-06  
+"TA\*GCA": p_value: 5.41254e-06  
+"TAT\*CA": p_value: 5.41254e-06  
+"TATG\*A": p_value: 5.41254e-06  
+"TATGC": p_value: 5.41254e-06  
+"TATGCA": p_value: 5.41254e-06  
+"TT\*TG": p_value: 5.41254e-06  
+"TT\*TGC": p_value: 5.41254e-06  
+"TTA\*G": p_value: 5.41254e-06  
+"TTA\*GC": p_value: 5.41254e-06  
+"TTAT\*C": p_value: 5.41254e-06  
+"TTATG": p_value: 5.41254e-06  
+"TTATGC": p_value: 5.41254e-06  
+"ACAC": p_value: 5.9538e-05   
+"ATG\*A": p_value: 5.9538e-05   
+"ATGC": p_value: 5.9538e-05  
+"CA\*A": p_value: 5.9538e-05  
+"GCA\*A": p_value: 5.9538e-05  
+"T\*ATG": p_value: 5.9538e-05  
+"TA\*G": p_value: 5.9538e-05  
+"TAT\*C": p_value: 5.9538e-05  
+"TATG": p_value: 5.9538e-05  
+"TGCA\*A": p_value: 5.9538e-05  
+"TTAT": p_value: 5.9538e-05  
+  
+the number of significant patterns: 33  
+  
+time: 0.015625 seconds  
