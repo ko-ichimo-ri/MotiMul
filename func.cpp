@@ -20,7 +20,7 @@ extern "C" {
 
 using namespace std;
 
-extern int debug,flag_nsp,flag_wild;
+extern int debug,flag_nsp,flag_wild,flag_testable;
 extern char wild_card;
 extern ld comb[NUMBER_COMB][NUMBER_COMB];
 
@@ -238,13 +238,13 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
     cout<<buf_l;
     cout<<endl;
   }
-  if(1-debug)printf("\nStatistical significant patterns:\n");
+  if(1-(debug||flag_testable))printf("\nStatistical significant patterns:\n");
   for(ll i=0;i<num_minsup;i++){
     get<0>(pattern[i])=p_value(get<2>(pattern[i]),get<3>(pattern[i]),count0,count1);//Alright?
   }
   sort(pattern.begin(),pattern.end()); //Alright?
   for(i=0;i<num_minsup;i++){
-    if(debug){
+    if(debug||flag_testable){
       printf("pattern[%d]=",i);
       cout<<get<1>(pattern[i])<<" ";
       cout<<"p_value: ";

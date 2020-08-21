@@ -21,6 +21,7 @@ int main(int argc,char **argv){
   flag_bonferroni_factor=0;
   flag_nsp=0;
   flag_wild=0;
+  flag_testable=0;
   double alpha=0.05;
   int flag_complement=0;
   string let("ACGT");//解析する文字
@@ -37,13 +38,16 @@ int main(int argc,char **argv){
   c.min_size=-1;
   c.num_wild=0;
 
-  while((opt=getopt(argc,argv,"a:db:o:O:p:r:w:cs:S:"))!=EOF){
+  while((opt=getopt(argc,argv,"a:dtb:o:O:p:r:w:cs:S:"))!=EOF){
     switch(opt){
       case 'a':
         alpha=atof(optarg);
         break;
       case 'd':
         debug=1;
+        break;
+      case 't':
+        flag_testable=1;
         break;
       case 'b':
         fs_factor.open(optarg,ios::app);
