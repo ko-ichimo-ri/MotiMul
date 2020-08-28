@@ -20,7 +20,7 @@ Do pattern mining with the statistical significance for negative and positive da
 ### Option  
 -a (float)  
   Set the significance level. The default value is 0.05.  
--w <non-negative integer>  
+-w (non-negative integer)  
   Set the number of wildcards. The default number is 0. The wildcard "\*" is used instead of one character.  
 -l (integer)  
   Set the minimum length of output sequences. If the option argument is negative, there are no constraints on the minimum length. The default value is -1.  
