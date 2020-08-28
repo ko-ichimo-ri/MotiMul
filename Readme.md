@@ -1,4 +1,4 @@
-# Motif Mining with Multiple Hypothsis Testing 
+# MotiMul  
 
 Build with the command "make". 
 
@@ -13,19 +13,26 @@ Build with the command "make".
 
 ## Usage
 
-./main [-a float] [-w non-negative integer] [-s integer] [-S integer] [FILE (negative dataset)] [FILE (positive dataset)]   
+./main [-a float] [-w non-negative integer] [-l integer] [-L integer] [-v] [-s string] [FILE (negative dataset)] [FILE (positive dataset)]   
 
 Do pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
 
 ### Option  
--a  
-  Configure the significance level. The default value is 0.05.  
--w  
+-a <float>  
+  Set the significance level. The default value is 0.05.  
+-w <non-negative integer>  
   Set the number of wildcards. The default number is 0. The wildcard "\*" is used instead of one character.  
--s  
+-l <integer>  
   Set the minimum length of output sequences. If the option argument is negative, there are no constraints on the minimum length. The default value is -1.  
--S  
+-L <integer>  
   Set the maximum length of output sequences. If the option argument is negative, there are no constraints on the maximum length. The default value is -1.
+-s <string>  
+  Set the kind of sequences for the analysis. The default value is "dna".  
+    - If the option argument is 'd' or 'dna', one can analyze DNA sequences, which are the strings composed of the alphabets 'A', 'T', 'G', 'C'.  
+    - If the option argument is 'r' or 'rna', one can analyze RNA sequences, which are the strings composed of the alphabets 'A', 'U', 'G', 'C'.  
+    - If the option argument is 'p' or 'protein', one can analyze protein sequences, which are the strings composed of the alphabets 'G', 'A', 'V', 'L', 'I', 'P', 'F', 'W', 'C', 'M', 'Y', 'S', 'T', 'N', 'Q', 'H', 'K', 'R', 'D', 'E'.  
+-v  
+  Print the MotiMul version number and exit.
 
 ## Example1  
 $ ./main data_negative.txt data_positive.txt   
@@ -57,7 +64,7 @@ the number of significant patterns: 12
 time: 0.015625 seconds
 
 ## Example2  
-$ ./main -a 0.01 -w 1 -s 4 -S 6 data_negative.txt data_positive.txt  
+./main -a 0.01 -w 1 -l 4 -L 6 -s d data_negative.txt data_positive.txt data_positive.txt  
 wild card: \*  
 Significant Level before Multiple Correction: 0.01  
 minsup(one-path): 6  
@@ -106,3 +113,8 @@ Statistical significant patterns:
 the number of significant patterns: 33  
   
 time: 0.015625 seconds  
+
+## License  
+
+Copyright (c) [2020] [Koichi Mori]  
+This software is released under the MIT License, see LICENSE.txt.  

@@ -1,3 +1,13 @@
+/*
+Copyright <2020> <Koichi Mori>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -24,7 +34,7 @@ int main(int argc,char **argv){
   flag_testable=0;
   double alpha=0.05;
   int flag_complement=0;
-  string let("ACGT");//解析する文字
+  string let("ACGT");//The set of alphabets for analysis
 
   string fname_nsp;
   string pattern_for_evaluation="";
@@ -38,7 +48,7 @@ int main(int argc,char **argv){
   c.min_size=-1;
   c.num_wild=0;
 
-  while((opt=getopt(argc,argv,"a:dtb:o:O:p:r:w:cs:S:"))!=EOF){
+  while((opt=getopt(argc,argv,"a:dtb:o:O:p:r:w:cl:L:s:v"))!=EOF){
     switch(opt){
       case 'a':
         alpha=atof(optarg);
@@ -88,11 +98,23 @@ int main(int argc,char **argv){
       case 'c':
         flag_complement=1;
         break;
-      case 's':
+      case 'l':
         c.min_size=atoi(optarg);
         break;
-      case 'S':
+      case 'L':
         c.max_size=atoi(optarg);
+        break;
+      case 's':
+        if(optarg==string("d")||optarg==string("dna"))
+          let="ATGC";
+        else if(optarg==string("r")||optarg==string("rna"))
+            let="AUGC";
+        else if(optarg==string("p")||optarg==string("protein"))
+            let="GAVLIPFWCMYSTNQHKRDE";
+        break;
+      case 'v':
+        cout<<"MotiMul 1.1.0"<<endl;
+        exit(0);
         break;
       default:
         break;
@@ -128,8 +150,8 @@ int main(int argc,char **argv){
   each_succession each_suc_initial;
 
   ll count[2];
-  count[0]=0;//与えられたデータで目的変数が0のものの個数（P値の下限を計算する時に用いる）
-  count[1]=0;//与えられたデータで目的変数が1のものの個数（P値の下限を計算する時に用いる）
+  count[0]=0;//the number of data in the negative dataset, which is used when one calculates the lower bound of p-value
+  count[1]=0;////the number of data in the positive dataset, which is used when one calculates the lower bound of p-value
 
   start=clock(); 
   s2="";
@@ -196,7 +218,7 @@ int main(int argc,char **argv){
   }
   if(!flag_result){
       num_minsup_pre=num_minsup;
-      print_result(let,pattern[1-flag_pattern],num_minsup_pre,alpha,minsup,total,count[0],count[1],db,fname_nsp);//Alright?
+      print_result(let,pattern[1-flag_pattern],num_minsup_pre,alpha,minsup,total,count[0],count[1],db,fname_nsp);
   }
   end=clock();
 

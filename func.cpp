@@ -1,3 +1,13 @@
+/*
+Copyright <2020> <Koichi Mori>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
 #include <iostream>
 #include <cstdio>
 #include <string>
@@ -105,7 +115,7 @@ void prefixspan(succession suc,string let,database db,ll minsup, pattern &patter
  
   if(debug)cout<<"new_prefixspan"<<minsup<<endl;
   if((c.max_size<0||s_length+1<=c.max_size)
-    &&(flag_wild==0||suc.num_wilds<=c.num_wild)){  //max_sizeを超えたらもうパターンはない！
+    &&(flag_wild==0||suc.num_wilds<=c.num_wild)){  //no patterns, the length of which is greater than that of max_size
     for(unsigned int i=0;i<let.size();i++){
       suc.s=s_origin+let[i];
       support_all=0;
@@ -220,8 +230,8 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
       exit(EXIT_FAILURE);
     }        
   }
-  if(debug)cout<<"letters+wild card: "<<let<<endl;//いらないかも
-  printf("the total size of the datasets: %Ld\nthe number of negative data: %Ld\nthe number of positive data: %Ld\n",total,count0,count1);//いらないかも
+  if(debug)cout<<"letters+wild card: "<<let<<endl;
+  printf("the total size of the datasets: %Ld\nthe number of negative data: %Ld\nthe number of positive data: %Ld\n",total,count0,count1);
   cout<<"Significant Level after Multiple Correction: ";
   cout<<delta;//ldprintf
   cout<<endl;
@@ -240,9 +250,9 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
   }
   if(1-(debug||flag_testable))printf("\nStatistical significant patterns:\n");
   for(ll i=0;i<num_minsup;i++){
-    get<0>(pattern[i])=p_value(get<2>(pattern[i]),get<3>(pattern[i]),count0,count1);//Alright?
+    get<0>(pattern[i])=p_value(get<2>(pattern[i]),get<3>(pattern[i]),count0,count1);
   }
-  sort(pattern.begin(),pattern.end()); //Alright?
+  sort(pattern.begin(),pattern.end()); 
   for(i=0;i<num_minsup;i++){
     if(debug||flag_testable){
       printf("pattern[%d]=",i);
