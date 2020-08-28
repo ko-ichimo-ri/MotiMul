@@ -18,15 +18,15 @@ Build with the command "make".
 Do pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
 
 ### Option  
--a <float>  
+-a (float)  
   Set the significance level. The default value is 0.05.  
 -w <non-negative integer>  
   Set the number of wildcards. The default number is 0. The wildcard "\*" is used instead of one character.  
--l <integer>  
+-l (integer)  
   Set the minimum length of output sequences. If the option argument is negative, there are no constraints on the minimum length. The default value is -1.  
--L <integer>  
+-L (integer)  
   Set the maximum length of output sequences. If the option argument is negative, there are no constraints on the maximum length. The default value is -1.  
--s <string>  
+-s (string)  
   Set the kind of sequences for the analysis. The default value is "dna".  
 - If the option argument is 'd' or 'dna', one can analyze DNA sequences, which are the strings composed of the alphabets 'A', 'T', 'G', 'C'.  
 - If the option argument is 'r' or 'rna', one can analyze RNA sequences, which are the strings composed of the alphabets 'A', 'U', 'G', 'C'.  
