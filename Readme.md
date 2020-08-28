@@ -28,9 +28,9 @@ Do pattern mining with the statistical significance for negative and positive da
   Set the maximum length of output sequences. If the option argument is negative, there are no constraints on the maximum length. The default value is -1.  
 -s <string>  
   Set the kind of sequences for the analysis. The default value is "dna".  
-    - If the option argument is 'd' or 'dna', one can analyze DNA sequences, which are the strings composed of the alphabets 'A', 'T', 'G', 'C'.
-    - If the option argument is 'r' or 'rna', one can analyze RNA sequences, which are the strings composed of the alphabets 'A', 'U', 'G', 'C'.
-    - If the option argument is 'p' or 'protein', one can analyze protein sequences, which are the strings composed of the alphabets 'G', 'A', 'V', 'L', 'I', 'P', 'F', 'W', 'C', 'M', 'Y', 'S', 'T', 'N', 'Q', 'H', 'K', 'R', 'D', 'E'.  
+- If the option argument is 'd' or 'dna', one can analyze DNA sequences, which are the strings composed of the alphabets 'A', 'T', 'G', 'C'.  
+- If the option argument is 'r' or 'rna', one can analyze RNA sequences, which are the strings composed of the alphabets 'A', 'U', 'G', 'C'.  
+- If the option argument is 'p' or 'protein', one can analyze protein sequences, which are the strings composed of the alphabets 'G', 'A', 'V', 'L', 'I', 'P', 'F', 'W', 'C', 'M', 'Y', 'S', 'T', 'N', 'Q', 'H', 'K', 'R', 'D', 'E'.  
 -v  
   Print the MotiMul version number and exit.
 
