@@ -36,7 +36,7 @@ Do pattern mining with the statistical significance for negative and positive da
   Print the MotiMul version number and exit.
 
 ## Example1  
-$ ./main data_negative.txt data_positive.txt   
+$ ./main data_negative.fa data_positive.fa   
 Significant Level before Multiple Correction: 0.05  
 minsup(one-path): 4  
 minsup(last): 8  
@@ -65,7 +65,7 @@ the number of significant patterns: 12
 time: 0.015625 seconds
 
 ## Example2  
-$ ./main -a 0.01 -w 1 -l 4 -L 6 -s d data_negative.txt data_positive.txt  
+$ ./main -a 0.01 -w 1 -l 4 -L 6 -s d data_negative.fa data_positive.fa  
 wild card: \*  
 Significant Level before Multiple Correction: 0.01  
 minsup(one-path): 6  
