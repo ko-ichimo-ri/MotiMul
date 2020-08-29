@@ -1,4 +1,4 @@
-# MotiMul  
+# MotiMul (v1.1.0)  
 
 Build with the command "make". 
 
@@ -18,19 +18,20 @@ Build with the command "make".
 Do pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
 
 ### Option  
--a <float>  
+-a (float)  
   Set the significance level. The default value is 0.05.  
--w <non-negative integer>  
+-w (non-negative integer)  
   Set the number of wildcards. The default number is 0. The wildcard "\*" is used instead of one character.  
--l <integer>  
+-l (integer)  
   Set the minimum length of output sequences. If the option argument is negative, there are no constraints on the minimum length. The default value is -1.  
--L <integer>  
-  Set the maximum length of output sequences. If the option argument is negative, there are no constraints on the maximum length. The default value is -1.
--s <string>  
+-L (integer)  
+  Set the maximum length of output sequences. If the option argument is negative, there are no constraints on the maximum length. The default value is -1.  
+-s (string)  
   Set the kind of sequences for the analysis. The default value is "dna".  
-    - If the option argument is 'd' or 'dna', one can analyze DNA sequences, which are the strings composed of the alphabets 'A', 'T', 'G', 'C'.  
-    - If the option argument is 'r' or 'rna', one can analyze RNA sequences, which are the strings composed of the alphabets 'A', 'U', 'G', 'C'.  
-    - If the option argument is 'p' or 'protein', one can analyze protein sequences, which are the strings composed of the alphabets 'G', 'A', 'V', 'L', 'I', 'P', 'F', 'W', 'C', 'M', 'Y', 'S', 'T', 'N', 'Q', 'H', 'K', 'R', 'D', 'E'.  
+- If the option argument is 'd' or 'dna', one can analyze DNA sequences, which are the strings composed of the alphabets 'A', 'T', 'G', 'C'.  
+- If the option argument is 'r' or 'rna', one can analyze RNA sequences, which are the strings composed of the alphabets 'A', 'U', 'G', 'C'.  
+- If the option argument is 'p' or 'protein', one can analyze protein sequences, which are the strings composed of the alphabets 'G', 'A', 'V', 'L', 'I', 'P', 'F', 'W', 'C', 'M', 'Y', 'S', 'T', 'N', 'Q', 'H', 'K', 'R', 'D', 'E'.  
+
 -v  
   Print the MotiMul version number and exit.
 
@@ -64,7 +65,7 @@ the number of significant patterns: 12
 time: 0.015625 seconds
 
 ## Example2  
-./main -a 0.01 -w 1 -l 4 -L 6 -s d data_negative.txt data_positive.txt data_positive.txt  
+$ ./main -a 0.01 -w 1 -l 4 -L 6 -s d data_negative.txt data_positive.txt  
 wild card: \*  
 Significant Level before Multiple Correction: 0.01  
 minsup(one-path): 6  
