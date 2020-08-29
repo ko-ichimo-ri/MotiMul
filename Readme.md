@@ -13,7 +13,7 @@ Build with the command "make".
 
 ## Usage
 
-./main [-a float] [-w non-negative integer] [-l integer] [-L integer] [-v] [-s string] [FILE (negative dataset)] [FILE (positive dataset)]   
+./main [-a float] [-w non-negative integer] [-l integer] [-L integer] [-s string] [-v] [FILE (negative dataset)] [FILE (positive dataset)]   
 
 Do pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
 
