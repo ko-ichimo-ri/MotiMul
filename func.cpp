@@ -24,9 +24,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include "macro.h"
 #include <gmp.h>
 #include <gmpxx.h>
-extern "C" {
-   #include <quadmath.h>
-}
 
 using namespace std;
 
@@ -43,6 +40,8 @@ void combination(ld2 &ans,unsigned long n,unsigned long r){
    mpf_set_z(rop_f,rop);
    ld2 ans_f(rop_f);
    ans=ans_f;
+   mpz_clear(rop);
+   mpf_clear(rop_f);
 } 
 
 char comp(char c){
@@ -260,13 +259,13 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
       cout<<"p_value: ";
       cout<<get<0>(pattern[i]);//ldprintf
       cout<<"; reject? ";
-      if(get<0>(pattern[i])<delta){
+      if(get<0>(pattern[i])<=delta){
         printf("Yes;\n\n");
       }else{
         printf("No;\n\n");
       }
     }else{
-      if(get<0>(pattern[i])<delta){
+      if(get<0>(pattern[i])<=delta){
         count_sig++;
         printf("\"");
         cout<<get<1>(pattern[i]);

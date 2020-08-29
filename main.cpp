@@ -113,8 +113,8 @@ int main(int argc,char **argv){
             let="GAVLIPFWCMYSTNQHKRDE";
         break;
       case 'v':
-        cout<<"MotiMul 1.1.0"<<endl;
-        exit(0);
+        cout<<"MotiMul 1.2.0"<<endl;
+        return 0;
         break;
       default:
         break;
