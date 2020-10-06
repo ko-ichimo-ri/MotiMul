@@ -15,7 +15,7 @@ Build with the command "make".
 
 ./main [-a float] [-w non-negative integer] [-l integer] [-L integer] [-s string] [-v] [FILE (negative dataset)] [FILE (positive dataset)]   
 
-Do sequential pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
+Mine sequential patterns with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
 
 ### Option  
 -a (float)  
