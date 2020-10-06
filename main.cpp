@@ -34,7 +34,7 @@ int main(int argc,char **argv){
   flag_testable=0;
   double alpha=0.05;
   flag_complement=0;
-  string let("ACGT");//The set of alphabets for analysis
+  string let("ATGC");//The set of alphabets for analysis
 
   string fname_nsp;
   string pattern_for_evaluation="";
@@ -121,7 +121,7 @@ int main(int argc,char **argv){
     }
   }
  // cout<<"letters: "<< let <<endl;
-  if(let!="ATCG"){
+  if(let!="ATGC"){
     flag_complement=0;
   }
   if(flag_wild)
