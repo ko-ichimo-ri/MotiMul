@@ -1,4 +1,4 @@
-# MotiMul (v1.2.0)  
+# MotiMul (v1.2.1)  
 
 Build with the command "make". 
 
@@ -15,7 +15,7 @@ Build with the command "make".
 
 ./main [-a float] [-w non-negative integer] [-l integer] [-L integer] [-s string] [-v] [FILE (negative dataset)] [FILE (positive dataset)]   
 
-Do pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
+Do sequential pattern mining with the statistical significance for negative and positive datasets in 2 FASTA format FILEs.
 
 ### Option  
 -a (float)  
@@ -32,6 +32,8 @@ Do pattern mining with the statistical significance for negative and positive da
 - If the option argument is 'r' or 'rna', one can analyze RNA sequences, which are the strings composed of the alphabets 'A', 'U', 'G', 'C'.  
 - If the option argument is 'p' or 'protein', one can analyze protein sequences, which are the strings composed of the alphabets 'G', 'A', 'V', 'L', 'I', 'P', 'F', 'W', 'C', 'M', 'Y', 'S', 'T', 'N', 'Q', 'H', 'K', 'R', 'D', 'E'.  
 
+-c  
+  Execute MotiMul without distinguishing a sequence and its complementary strand if you use it for DNA sequences.
 -v  
   Print the MotiMul version number and exit.
 
