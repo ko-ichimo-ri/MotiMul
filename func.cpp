@@ -258,6 +258,7 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
     get<0>(pattern[i])=p_value(get<2>(pattern[i]),get<3>(pattern[i]),count0,count1);
   }
   sort(pattern.begin(),pattern.end()); 
+  string pattern_complement;
   for(i=0;i<num_minsup;i++){
     if(debug||flag_testable){
       printf("pattern[%d]=",i);
@@ -275,8 +276,9 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
         count_sig++;
         printf("\"");
         cout<<get<1>(pattern[i]);
-        if(flag_complement==1){
-          cout<<"\" | \""<<complement(get<1>(pattern[i]));
+        pattern_complement=complement(get<1>(pattern[i]));
+        if(flag_complement==1 && get<1>(pattern[i])!=pattern_complement){
+          cout<<"\" | \""<<pattern_complement;
         }
         cout<<"\": p_value: ";
         cout<<get<0>(pattern[i]);//ldprintf
