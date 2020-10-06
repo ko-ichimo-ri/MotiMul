@@ -33,7 +33,7 @@ int main(int argc,char **argv){
   flag_wild=0;
   flag_testable=0;
   double alpha=0.05;
-  int flag_complement=0;
+  flag_complement=0;
   string let("ACGT");//The set of alphabets for analysis
 
   string fname_nsp;
@@ -113,7 +113,7 @@ int main(int argc,char **argv){
             let="GAVLIPFWCMYSTNQHKRDE";
         break;
       case 'v':
-        cout<<"MotiMul 1.2.0"<<endl;
+        cout<<"MotiMul 1.2.1"<<endl;
         return 0;
         break;
       default:
@@ -121,6 +121,9 @@ int main(int argc,char **argv){
     }
   }
  // cout<<"letters: "<< let <<endl;
+  if(let!="ATCG"){
+    flag_complement=0;
+  }
   if(flag_wild)
   cout<<"wild card: "<< wild_card<<endl;
   cout<<"Significant Level before Multiple Correction: "<<alpha<<endl;

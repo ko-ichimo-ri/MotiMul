@@ -24,7 +24,7 @@ extern "C" {
 }
 #include "macro.h"
 
-int debug,flag_nsp,flag_bonferroni_factor,flag_wild,flag_testable;
+int debug,flag_nsp,flag_bonferroni_factor,flag_wild,flag_testable,flag_complement;
 char wild_card;
 
 void combination(ld2 &ans,unsigned long n,unsigned long r);

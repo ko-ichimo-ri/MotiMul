@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 using namespace std;
 
-extern int debug,flag_nsp,flag_wild,flag_testable;
+extern int debug,flag_nsp,flag_wild,flag_testable,flag_complement;
 extern char wild_card;
 extern ld comb[NUMBER_COMB][NUMBER_COMB];
 
@@ -192,7 +192,13 @@ void prefixspan(succession suc,string let,database db,ll minsup, pattern &patter
 
       if(support_all>=minsup){
         if(support_all_with_constraints>=minsup){
-          pattern.push_back(make_tuple(0.0,suc.s,support_all_with_constraints,support1_with_constraints));
+          if(flag_complement==0){
+            pattern.push_back(make_tuple(0.0,suc.s,support_all_with_constraints,support1_with_constraints));
+          }else{
+            if(suc.s<=complement(suc.s)){
+              pattern.push_back(make_tuple(0.0,suc.s,support_all_with_constraints,support1_with_constraints));
+            }
+          }
         }
         prefixspan(suc,let,projected_db,minsup,pattern,c);
       }
@@ -269,6 +275,9 @@ void print_result(string let,pattern &pattern,ll num_minsup,double alpha,ll mins
         count_sig++;
         printf("\"");
         cout<<get<1>(pattern[i]);
+        if(flag_complement==1){
+          cout<<"\" | \""<<complement(get<1>(pattern[i]));
+        }
         cout<<"\": p_value: ";
         cout<<get<0>(pattern[i]);//ldprintf
         cout<<endl;
