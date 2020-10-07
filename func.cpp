@@ -57,7 +57,7 @@ char comp(char c){
         case '*':
             return '*';        
         default:
-            return '\0';
+            return c;
     }
 
 }
