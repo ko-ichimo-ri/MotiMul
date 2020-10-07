@@ -53,7 +53,9 @@ char comp(char c){
         case 'C':
             return 'G';
         case 'G':
-            return 'C';        
+            return 'C';
+        case '*':
+            return '*';        
         default:
             return '\0';
     }
