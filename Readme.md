@@ -1,4 +1,4 @@
-# MotiMul (v1.2.2)  
+# MotiMul (v1.2.3)  
 
 Build with the command "make". 
 
